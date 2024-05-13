@@ -1,0 +1,27 @@
+GET http://localhost:3001/api/blogs 
+###
+ 
+DELETE http://localhost:3001/api/blogs/663d0dafa21b8412cdcb2957
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZml0YSIsImlkIjoiNjYzZDBjMmU2MzExYWFkNzViMDU2NTRmIiwiaWF0IjoxNzE1Mjc3MjAxfQ.ldMz1Pgun9FreiwGLyKqc5cK5c--GXsUHTGr5ngq5sQ
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZml0YSIsImlkIjoiNjYzZDBjMmU2MzExYWFkNzViMDU2NTRmIiwiaWF0IjoxNzE1Mjc3MjAxfQ.ldMz1Pgun9FreiwGLyKqc5cK5c--GXsUHTGr5ngq5sQ
+
+{
+    "title": "Fifth post by Rafita ",
+    "url": "http://pepeito",
+    "likes": 345
+}     
+
+###
+PUT http://localhost:3001/api/blogs/6637a05cf2d986e6d2551809
+Content-Type: application/json 
+
+{
+    "title": "First post",
+    "author": "andres_anni",
+    "url": "http://pepeito",
+    "likes": 345
+}     
+
