@@ -12,7 +12,6 @@ blogRouter.get('/', async (request, response) => {
 
 blogRouter.post('/', async (request, response) => {
   const { title, url, likes } = request.body;
-  const token = request.token;
   const userInToken = request.user;
   if (!userInToken) {
     return response.status(401).json({ error: 'invalid token' });
@@ -38,7 +37,6 @@ blogRouter.post('/', async (request, response) => {
 });
 
 blogRouter.delete('/:id', async (request, response) => {
-  
   const paramId = request.params.id;
   const userInToken = request.user;
 

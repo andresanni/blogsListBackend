@@ -7,7 +7,13 @@ const config = require('./utils/config');
 const blogRouter = require('./controller/blogs');
 const userRouter = require('./controller/users');
 const loginRouter = require('./controller/login');
-const { requestLogger, errorHandler, tokenExtractor, userExtractor} = require('./utils/middleware')
+const testingRouter = require('./controller/testing');
+const {
+  requestLogger,
+  errorHandler,
+  tokenExtractor,
+  userExtractor,
+} = require('./utils/middleware');
 const mongoUrl = config.MONGO_URI;
 
 logger.info(`connecting to ${mongoUrl}`);
@@ -29,6 +35,9 @@ app.use(tokenExtractor);
 app.use('/api/blogs', userExtractor, blogRouter);
 app.use('/api/users', userRouter);
 app.use('/api/login', loginRouter);
+if (process.env.NODE_ENV === 'test') {
+  app.use('/api/testing', testingRouter);
+}
 
 app.use(errorHandler);
 
