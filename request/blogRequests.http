@@ -1,5 +1,7 @@
 GET http://localhost:3001/api/blogs 
 ###
+GET http://localhost:3001/api/blogs/66402df800aaba39613308f0
+###
  
 DELETE http://localhost:3001/api/blogs/663d0dafa21b8412cdcb2957
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZml0YSIsImlkIjoiNjYzZDBjMmU2MzExYWFkNzViMDU2NTRmIiwiaWF0IjoxNzE1Mjc3MjAxfQ.ldMz1Pgun9FreiwGLyKqc5cK5c--GXsUHTGr5ngq5sQ
